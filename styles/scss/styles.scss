@@ -1,9 +1,6 @@
-$card-color: hsl(0, 0%, 100%);
-$text-color: hsl(212, 45%, 89%);
-$header-color: hsl(218, 44%, 22%);
-$back-color: hsl(220, 15%, 55%);
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-$font-stack: 'Outfit', sans-serif;
+@import 'utility.scss';
+@import 'wrapper.scss';
+@import 'query.scss';
 
 * {
     box-sizing: border-box;
@@ -12,17 +9,66 @@ $font-stack: 'Outfit', sans-serif;
 }
 
 body {
+    overflow: scroll;
     font-family: $font-stack;
     color: $text-color;
     font-size: 15px;
     font-weight: 400;
 
     background: $back-color;
+
+    width: 100vw;
+    height: 100vh;
 }
 
-//font-weight: 700;
+#qrcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    background-color: $card-color;
+    width: 350px;
+    height: 500px;
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px $text-color;
+
+    img {
+        object-fit: contain;
+        height: 310px;
+        width: 310px;
+
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    div {
+        width: 100%;
+        height: fit-content;
+
+        padding: 15px;
+
+        h3 {
+            color: $header-color;
+            font-weight: 700;
+            font-size: 23px;
+
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p {
+            color: $text-color;
+            text-align: center;
+        }
+    }
+}
+
 
 .attribution {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
     font-size: 11px;
     text-align: center;
     color: hsl(228, 45%, 44%);
