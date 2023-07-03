@@ -1,8 +1,26 @@
+$card-color: hsl(0, 0%, 100%);
+$text-color: hsl(212, 45%, 89%);
+$header-color: hsl(218, 44%, 22%);
+$back-color: hsl(220, 15%, 55%);
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+$font-stack: 'Outfit', sans-serif;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: $font-stack;
+    color: $text-color;
+    font-size: 15px;
+    font-weight: 400;
+
+    background: $back-color;
+}
+
+//font-weight: 700;
 
 .attribution {
     font-size: 11px;
